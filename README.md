@@ -27,4 +27,4 @@ Executing `parse_features.sh` completed database structural counts for **16,454 
 
 **Why this matters:** The near 1:1 Watson-to-Crick ratio verifies balanced sequence transcription on complementary strands. This tool forms the foundation for mapping genomic intervals and addresses the **off-by-one index mismatch** between computer scientists (0-indexed BED files) and biologists (1-indexed GFF files).
 
-*For a deep dive into the coordinate translation formulas and complete data charts, refer to **`Project-1_Genomic-Feature-ETL/project1-features-etl.pdf`**.*
+*For a deep dive into the coordinate translation formulas and complete data charts, refer to **`YeastFeatures_ParserETL_PARSING (Report)`**.*
