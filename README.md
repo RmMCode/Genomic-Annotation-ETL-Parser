@@ -1,7 +1,7 @@
 # Genomic-Annotation-ETL-Parser
 High performance, O(1) memory-efficient time complexity genomic ETL pipeline written in POSIX Bash and AWK. Automates genomic feature filtering, validation profiling, and off-by-one error mitigation through exact UCSC BED (0-indexed, open) to Sanger GFF (1-indexed, closed) coordinate space transformations.
 
-## Project 1: Low-Memory Genomic Feature Stream Parser
+## Project: Low-Memory Genomic Feature Stream Parser
 *Focus areas: Stream I/O, POSIX Shell Scripting, Regular Expression Profiling, O(1) Memory Footprint.*
 
 ### Motivation 
