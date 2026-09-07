@@ -4,12 +4,12 @@ High performance, O(1) memory-efficient time complexity genomic ETL pipeline wri
 ## 🧬 Project 1: Low-Memory Genomic Feature Stream Parser
 *Focus areas: Stream I/O, POSIX Shell Scripting, Regular Expression Profiling, O(1) Memory Footprint.*
 
-### 💡 Motivation (CS Translation)
+### 💡 Motivation 
 Yeast genome annotation datasets (such as `SGD_features.tab`) contain extensive lists of genomic elements (genes, replication origins, promoters) and their respective mapping coordinates. Loading these multi-gigabyte files into RAM using typical data science libraries like pandas introduces substantial memory overhead and represents a massive scaling bottleneck in high-throughput cloud microservices. 
 
 This project solves the scaling problem by designing an **O(1) space complexity stream parser**.
 
-### 🛠️ Methodology & Software Rationale
+### 🛠️ Methodology & Software 
 *   **Pipeline Architecture:** The tool utilizes highly optimized, C-compiled Unix core utilities connected via standard POSIX streams (`stdout`/`stdin`). 
 *   **Fail-Fast Design:** To ensure maximum stability and security, the script implements strict bash safety controls:
     ```bash
