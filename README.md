@@ -1,15 +1,15 @@
 # Genomic-Annotation-ETL-Parser
 High performance, O(1) memory-efficient time complexity genomic ETL pipeline written in POSIX Bash and AWK. Automates genomic feature filtering, validation profiling, and off-by-one error mitigation through exact UCSC BED (0-indexed, open) to Sanger GFF (1-indexed, closed) coordinate space transformations.
 
-## 🧬 Project 1: Low-Memory Genomic Feature Stream Parser
+## Project 1: Low-Memory Genomic Feature Stream Parser
 *Focus areas: Stream I/O, POSIX Shell Scripting, Regular Expression Profiling, O(1) Memory Footprint.*
 
-### 💡 Motivation 
+### Motivation 
 Yeast genome annotation datasets (such as `SGD_features.tab`) contain extensive lists of genomic elements (genes, replication origins, promoters) and their respective mapping coordinates. Loading these multi-gigabyte files into RAM using typical data science libraries like pandas introduces substantial memory overhead and represents a massive scaling bottleneck in high-throughput cloud microservices. 
 
 This project solves the scaling problem by designing an **O(1) space complexity stream parser**.
 
-### 🛠️ Methodology & Software 
+### Methodology & Software 
 *   **Pipeline Architecture:** The tool utilizes highly optimized, C-compiled Unix core utilities connected via standard POSIX streams (`stdout`/`stdin`). 
 *   **Fail-Fast Design:** To ensure maximum stability and security, the script implements strict bash safety controls:
     ```bash
@@ -18,7 +18,7 @@ This project solves the scaling problem by designing an **O(1) space complexity 
     This ensures that the pipeline halts immediately upon encountering any unassigned variables or command exit failures, preventing the downstream propagation of silent errors.
 *   **Lightweight Extraction:** It processes data row-by-row directly inside standard streams. Slicing column intervals is handled by `cut`, anchor filtering by `grep` regexes, and complex formatting by `awk`.
 
-### 📊 Results & Biological Significance
+### Results & Biological Significance
 Executing `parse_features.sh` completed database structural counts for **16,454 genomic features** in **under 12 milliseconds**:
 *   **Verified Features:** `5,155`
 *   **Uncharacterized Sequences:** `728`
